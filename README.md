@@ -27,3 +27,4 @@ cd kmfddm
 You are all set up!
 
 ### Using ddm_examples
+For a deep dive into the various functionality in kmfddm, check out the [kmfddm quickstart](https://github.com/jessepeterson/kmfddm/blob/main/docs/quickstart.md#basic-setup).
