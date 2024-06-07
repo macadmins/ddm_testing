@@ -33,7 +33,7 @@ You are all set up!
 The easier way to get started with a vm is using tart, but feel free to use whatever you prefer. See [Tart Quickstart](tart_quickstart.md) for more info.
 
 - Copy the enroll_$MDM.mobileconfig onto your VM and install it.
-- Confirm there is stuff happening using `sudo log stream --info --debug --preciate 'subsystem == "com.apple.ManagedClient"'`
+- Confirm there is stuff happening using `sudo log stream --info --debug --predicate 'subsystem == "com.apple.ManagedClient"'`
 
 Lastly, grab your test VM's hardware UUID as we will need this for all ddm opertaions. The rest of this guide will assume the `ID` env var is set to your test vm's UUID.
 
