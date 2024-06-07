@@ -15,11 +15,11 @@ git clone https://github.com/macadmins/ddm_examples.git
 Let's setup our environment as well
 ```bash
 export API_KEY="$YOUR_DDM_API_KEY"
-export BASE_URL="https://$YOURINSTANCE.macadmins.io"
+export BASE_URL="https://$YOUR_DDM_INSTANCE.macadmins.io"
 ```
-Put your assigned info where the placeholders are. For instance, if you have instance `mdm42`, your export line for BASE_URL would be:
+Put your assigned info where the placeholders are. For instance, if you have instance `ddm42`, your export line for BASE_URL would be:
 ```bash
-export BASE_URL="https://mdm42.macadmins.io"
+export BASE_URL="https://ddm42.macadmins.io"
 ```
 Let's confirm our keys and BASE_URL are setup correctly by listing all declarations on the server:
 ```bash
