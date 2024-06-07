@@ -1,6 +1,9 @@
 # ddm_testing
 Follow the directions below for getting started with your MAOS-hosted ddm test server
 
+
+> 🚨🚨🚨 This is NOT a secure setup. Only use machines where you won't lament losing data 🚨🚨🚨
+
 ### Initial setup
 For the initial setup, create a working directory in your favorite location and clone the repos shown below
 
