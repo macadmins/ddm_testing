@@ -23,8 +23,7 @@ export BASE_URL="https://ddm42.macadmins.io"
 ```
 Let's confirm our keys and BASE_URL are setup correctly by listing all declarations on the server:
 ```bash
-cd kmfddm
-./tools/api-declarations-get.sh
+./kmfddm/tools/api-declarations-get.sh
 [] # This makes sense because we've not added any declarations yet
 ```
 You are all set up!
