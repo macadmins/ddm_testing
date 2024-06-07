@@ -27,7 +27,7 @@ cd kmfddm
 You are all set up!
 
 #### Enroll a test vm into your MDM server
-The easier way to get started with a vm is using tart, but feel free to use whatever you prefer. See tart_quickstart.md for more info.
+The easier way to get started with a vm is using tart, but feel free to use whatever you prefer. See [Tart Quickstart](tart_quickstart.md) for more info.
 
 - Copy the enroll_$MDM.mobileconfig onto your VM and install it.
 - Confirm there is stuff happening using `sudo log stream --info --debug --preciate 'subsystem == "com.apple.ManagedClient"'`
