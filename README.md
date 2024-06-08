@@ -1,7 +1,6 @@
 # ddm_testing
 Follow the directions below for getting started with your MAOS-hosted ddm test server
 
-
 > 🚨🚨🚨 This is NOT a secure setup. Only use machines where you won't lament losing data 🚨🚨🚨
 
 ### Initial setup
@@ -10,6 +9,11 @@ For the initial setup, create a working directory in your favorite location and 
 ```bash
 git clone https://github.com/jessepeterson/kmfddm.git
 git clone https://github.com/macadmins/ddm_examples.git
+```
+
+Also install jq, it'll make everything easier to read:
+```
+brew install jq
 ```
 
 Let's setup our environment as well
