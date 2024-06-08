@@ -38,10 +38,15 @@ The easier way to get started with a vm is using tart, but feel free to use what
 - Copy the enroll_$MDM.mobileconfig onto your VM and install it.
 - Confirm there is stuff happening using `sudo log stream --info --debug --predicate 'subsystem == "com.apple.ManagedClient"'`
 
-Lastly, grab your test VM's hardware UUID as we will need this for all ddm opertaions. The rest of this guide will assume the `ID` env var is set to your test vm's UUID.
+Lastly, grab your test VM's hardware UUID as we will need this for all ddm opertaions. The rest of this guide will assume the `ID` env var is set to your test vm's UUID. If the UUID is incorrect at any point moving forward, it will cause things to look like they are not working. Be 💯 sure it is correct.
+
+The easiest way to get the UUID is to grab it from the the server logs. Check the testing channel on Slack for directions on getting the server logs.
 
 ```bash
 export ID=$YOUR_VM_UUID_HERE
+
+# Confirm the ID matches the server logs for the enrollment
+echo $ID
 ```
 
 #### Using ddm_examples
