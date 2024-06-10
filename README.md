@@ -29,6 +29,13 @@ export API_KEY="$YOUR_DDM_API_KEY"
 export BASE_URL="https://$YOUR_DDM_INSTANCE.macadmins.io"
 ```
 
+And these additional env vars are needed for `ddmctl`
+```bash
+export DDM_API_KEY="$YOUR_DDM_API_KEY"
+export DDM_URL="https://$YOUR_DDM_INSTANCE.macadmins.io"
+export DDM_CLIENT_ID="$YOUR_TEST_CLIENT_ENROLLMENT_UUID"
+```
+
 Put your assigned info where the placeholders are. For instance, if you have instance `ddm42`, your export line for BASE_URL would be:
 
 ```bash
@@ -40,6 +47,10 @@ Let's confirm our keys and BASE_URL are setup correctly by listing all declarati
 ```bash
 ./kmfddm/tools/api-declarations-get.sh
 [] # This makes sense because we've not added any declarations yet
+```
+Or using `ddmctl`
+```bash
+ddmctl declaration get all
 ```
 
 With this you should now have communication with the MAOS KMFDDM server!
@@ -55,7 +66,7 @@ Lastly, grab your test VM's MDM UDID as we will need this for all DDM opertaions
 
 On macOS the MDM UDID is the same as the hardware UUID. A couple easy ways to get this UUID on macOS:
 
-- grab it from the the server logs. Check the testing channel on Slack for directions on getting the server logs. 
+- grab it from the the server logs. Check the testing channel on Slack for directions on getting the server logs.
 - On the Mac hold the Option key, click the Apple menu in the upper left of the screen, and choose the first menu item "System Information..." It'll be listed toward the bottom the screen that was just opened.
 
 ```bash
@@ -79,9 +90,6 @@ Within your working directory, run the following command to apply all examples f
 ```bash
 ./kmfddm/tools/syncdir.py ddm_examples
 ```
-
-This script will apply everything in the ddm_examples folder. Note that is uses the environment variables from above (which can also be supplied as args).
-
 If you run it a second time, you'll see that everything has already been applied on the server side:
 
 ```bash
@@ -105,12 +113,25 @@ Confirm the machine does not have anything assigned to it yet:
 ./kmfddm/tools/api-enrollment-sets-get.sh $ID
 null
 ```
+or via `ddmctl`
+```bash
+ddmctl device sets
+```
+
 Add your machine to the default set and confirm it now shows up:
 ```bash
 ./kmfddm/tools/api-enrollment-sets-put.sh $ID default
 Response HTTP Code: 204 # This means it was successful. 304 means it is already in the set.
 
 ./kmfddm/tools/api-enrollment-sets-get.sh $ID
+```
+or using `ddmctl`
+```bash
+ddmctl device add default
+$YOUR_DEVICE_UID has been added to default
+
+ddmctl device sets
+
 ```
 
 Now that we know those the device has been assigned to the the default, we can check what the server thinks the the devices's declarations *should* be:
