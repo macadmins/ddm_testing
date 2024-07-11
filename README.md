@@ -3,7 +3,7 @@
 Follow the directions below for getting started with your MAOS-hosted DDM test server.
 
 > [!CAUTION]
-> 🚨🚨🚨 This is an INSECURE setup. Only enroll machines where you won't lament losing data 🚨🚨🚨
+> 🚨🚨🚨 This is an UNSECURE setup. Only enroll machines where you won't lament losing data 🚨🚨🚨
 
 ### Initial setup
 
