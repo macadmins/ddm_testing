@@ -25,14 +25,15 @@ If you don't like or don't want to use homebrew, the [jq project provides compil
 Let's setup our environment as well
 
 ```bash
-export API_KEY="$YOUR_DDM_API_KEY"
-export BASE_URL="https://$YOUR_DDM_INSTANCE.macadmins.io"
+export API_KEY="$YOUR_API_KEY"
+export API_USER="nanohub"
+export API_BASE_URL="https://$YOUR_NANOHUB_INSTANCE.macadmins.io/api/v1/ddm"
 ```
 
 Put your assigned info where the placeholders are. For instance, if you have instance `ddm42`, your export line for BASE_URL would be:
 
 ```bash
-export BASE_URL="https://ddm42.macadmins.io"
+export BASE_URL="https://nanohub42.macadmins.io/api/v1/ddm"
 ```
 
 Let's confirm our keys and BASE_URL are setup correctly by listing all declarations on the server:
@@ -42,7 +43,7 @@ Let's confirm our keys and BASE_URL are setup correctly by listing all declarati
 [] # This makes sense because we've not added any declarations yet
 ```
 
-With this you should now have communication with the MAOS KMFDDM server!
+With this you should now have communication with the MAOS NanoHUB server!
 
 #### Enroll a test vm into your MDM server
 
@@ -55,7 +56,7 @@ Lastly, grab your test VM's MDM UDID as we will need this for all DDM opertaions
 
 On macOS the MDM UDID is the same as the hardware UUID. A couple easy ways to get this UUID on macOS:
 
-- grab it from the the server logs. Check the testing channel on Slack for directions on getting the server logs. 
+- grab it from the the server logs. Check the testing channel on Slack for directions on getting the server logs.
 - On the Mac hold the Option key, click the Apple menu in the upper left of the screen, and choose the first menu item "System Information..." It'll be listed toward the bottom the screen that was just opened.
 
 ```bash
