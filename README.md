@@ -13,15 +13,6 @@ For the initial setup, create a working directory in your favorite location and 
 git clone https://github.com/jessepeterson/kmfddm.git
 git clone https://github.com/macadmins/ddm_examples.git
 ```
-
-Also install jq, it'll make everything easier to read:
-
-```
-brew install jq
-```
-
-If you don't like or don't want to use homebrew, the [jq project provides compiled binaries](https://jqlang.github.io/jq/download/). Be sure it put it in a place in your `$PATH`.
-
 Let's setup our environment as well
 
 ```bash
