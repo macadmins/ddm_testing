@@ -84,7 +84,7 @@ If you run it a second time, you'll see that everything has already been applied
 nanohubctl ddm sync ./ddm_examples
 ```
 
-Now you can make incremental changes and sync them to the repo. Notably when changes occur syncdir should also notify any devices which have the declarations and trigger them to apply the changes.
+Now you can make incremental changes and sync them to the repo. Notably when changes occur, nanohub should also notify any devices which have the declarations and trigger them to apply the changes.
 
 #### Put the test vm into a set
 
