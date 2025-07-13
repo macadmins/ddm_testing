@@ -9,13 +9,13 @@ Follow the directions below for getting started with your MAOS-hosted NanoHUB te
 
 Download and install the nanohubctl binary
 
- * Download nanohubctl - https://github.com/macadmins/nanohubctl/releases/tag/1.0.7
+ * Download nanohubctl - https://github.com/macadmins/nanohubctl/releases/tag/1.0.8
  * Extract it and install it:
  ```
-  unzip nanohubctl-darwin-arm64-1.0.7.zip
-  xattr -r -d com.apple.quarantine ./nanohubctl-darwin-arm64-1.0.7/nanohubctl-darwin-arm64
-  sudo mv ./nanohubctl-darwin-arm64-1.0.7/nanohubctl-darwin-arm64 /usr/local/bin/nanohubctl
-  rm -rf nanohubctl-darwin-arm64-1.0.7
+  unzip nanohubctl-darwin-arm64-1.0.8.zip
+  xattr -r -d com.apple.quarantine ./nanohubctl-darwin-arm64-1.0.8/nanohubctl-darwin-arm64
+  sudo mv ./nanohubctl-darwin-arm64-1.0.8/nanohubctl-darwin-arm64 /usr/local/bin/nanohubctl
+  rm -rf nanohubctl-darwin-arm64-1.0.8
  ```
 
 For the initial setup, clone this repo, cd into it and clone the repo shown below
@@ -25,6 +25,7 @@ git clone https://github.com/macadmins/ddm_testing.git
 cd ddm_testing
 git clone https://github.com/macadmins/ddm_examples.git
 ```
+
 Let's setup our environment as well
 
 ```bash
